@@ -1,0 +1,4 @@
+// app/views/comments/update.js.erb
+
+// Replace the entire comment with the updated content.
+$("#<%= dom_id(@comment) %>").replaceWith("<%= j(render @comment) %>");

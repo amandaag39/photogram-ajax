@@ -1,0 +1,7 @@
+// app/views/comments/edit.js.erb
+
+// assign comment to a variable
+var edited_comment = ("<%= j(render 'form', comment: @comment) %>");
+
+// Target the comment's container to replace its content with the edit form.
+$("#<%= dom_id(@comment) %>").html(edited_comment);

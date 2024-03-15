@@ -3,11 +3,13 @@
 // store the created comment in a variable
 var added_comment = $("<%= j(render @comment) %>");
 
+// hinder post from being displayed right away
 added_comment.hide();
 
 // specify where in the dom you want the submitted comment to appear
 $("#<%= dom_id(@comment.photo) %>_new_comment_form").before(added_comment);
 
+// slow reveal
 added_comment.slideDown();
 
 // clear the form for ease of usabilty 
