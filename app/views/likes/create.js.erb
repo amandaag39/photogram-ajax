@@ -1,0 +1,3 @@
+// app/views/likes/create.js.erb
+
+$("#<%= dom_id(@like.photo) %>_likes").html("<%= escape_javascript(render 'photos/likes', photo: @like.photo) %>");
